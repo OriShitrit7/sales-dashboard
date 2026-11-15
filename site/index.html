@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f6f7fb" />
+    <meta name="description" content="A simple sales dashboard with sample store data." />
+    <title>Sales Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <main class="dashboard">
+      <header class="page-header">
+        <div class="brand" aria-label="Store analytics">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none"><path d="M7 22V15M16 22V9M25 22V12" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/></svg>
+          </span>
+          <span>STORE ANALYTICS</span>
+        </div>
+        <div class="header-content">
+          <div>
+            <p class="eyebrow">Overview</p>
+            <h1>Sales Dashboard</h1>
+            <p class="subtitle">A simple look at how your store is performing.</p>
+          </div>
+          <span class="date-pill"><span class="date-dot" aria-hidden="true"></span> Sample data · Last 12 months</span>
+        </div>
+      </header>
+
+      <section class="stats" aria-label="Store summary">
+        <article class="stat-card">
+          <div class="stat-top">
+            <span class="stat-label">Total sales</span>
+            <span class="icon icon-purple" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M4 17.5 9 12l3 3 7-8M15 7h4v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+          <strong class="stat-value" id="total-sales">—</strong>
+          <span class="stat-note">Across the last 12 months</span>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-top">
+            <span class="stat-label">Orders</span>
+            <span class="icon icon-blue" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M5 7h14l-1 12H6L5 7ZM9 9V6a3 3 0 0 1 6 0v3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+          <strong class="stat-value" id="orders">—</strong>
+          <span class="stat-note">Completed purchases</span>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-top">
+            <span class="stat-label">Customers</span>
+            <span class="icon icon-orange" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3" stroke="currentColor" stroke-width="1.8"/><path d="M5.5 19c.3-3.5 2.6-5 6.5-5s6.2 1.5 6.5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            </span>
+          </div>
+          <strong class="stat-value" id="customers">—</strong>
+          <span class="stat-note">Unique shoppers</span>
+        </article>
+      </section>
+
+      <section class="chart-card" aria-labelledby="chart-title">
+        <div class="chart-heading">
+          <div>
+            <p class="eyebrow">Performance</p>
+            <h2 id="chart-title">Monthly sales</h2>
+            <p class="chart-subtitle">Revenue over the last 12 months</p>
+          </div>
+          <div class="legend"><span class="legend-dot" aria-hidden="true"></span> Sales (USD)</div>
+        </div>
+        <div class="chart-scroll">
+          <div class="chart" role="group" id="sales-chart" aria-label="Bar chart of monthly sales"></div>
+        </div>
+        <p class="scroll-hint">Swipe chart to see all months →</p>
+        <p class="chart-footnote">Illustrative data for a sample store</p>
+      </section>
+    </main>
+  </body>
+</html>
